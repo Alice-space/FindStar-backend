@@ -3,7 +3,8 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Birth(models.Model):
-    birth = models.DateField(verbose_name=_("birth"))
+    birth = models.DateField(verbose_name=_("birth"), unique=True)
+    word = models.TextField(verbose_name=_("statement"))
 
     class Meta:
         verbose_name = _("Birth")

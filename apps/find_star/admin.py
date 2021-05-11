@@ -4,8 +4,8 @@ from apps.find_star.models import Birth, Image
 
 @admin.register(Birth)
 class Birth(admin.ModelAdmin):
-    list_display = ["id", "birth"]
-    search_fields = ["birth"]
+    list_display = ["id", "birth", "word"]
+    search_fields = ["birth", "word"]
 
 
 @admin.register(Image)

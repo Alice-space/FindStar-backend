@@ -7,7 +7,7 @@ from apps.find_star.models import Birth, Image
 class BirthType(DjangoObjectType):
     class Meta:
         model = Birth
-        fields = ["id", "birth", "image_set"]
+        fields = ["id", "birth", "word", "image_set"]
 
 
 class ImageType(DjangoObjectType):
@@ -25,8 +25,6 @@ class Query(graphene.ObjectType):
     birth = graphene.Field(BirthType, date=graphene.Date(required=True))
 
     def resolve_birth(root, info, date):
-        print(date)
-        print(type(date))
         return Birth.objects.get(birth=date)
 
     birth_no_found = graphene.List(ImageType)
