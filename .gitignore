@@ -1,6 +1,7 @@
 
 apps/*/migrations/*
 !apps/*/migrations/__init__.py
+config/config.ini
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/macos,python,pycharm+all,django
