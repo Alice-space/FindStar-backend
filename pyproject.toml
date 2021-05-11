@@ -18,7 +18,7 @@ uWSGI = {version = "^2.0.19", optional = true}
 mysql = ["mysqlclient"]
 pgsql = ["psycopg2"]
 wsgi = ["uWSGI"]
-asgi = ["daphen"]
+asgi = ["daphne"]
 
 [tool.poetry.dev-dependencies]
 
