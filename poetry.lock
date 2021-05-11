@@ -443,7 +443,7 @@ test = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 
 [extras]
-asgi = []
+asgi = ["daphne"]
 mysql = ["mysqlclient"]
 pgsql = ["psycopg2"]
 wsgi = ["uWSGI"]
@@ -451,7 +451,7 @@ wsgi = ["uWSGI"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "e8fcc810b485c238eeb0210fc413b21ff268268907c833b4d54c6e24a07aaec2"
+content-hash = "f8bf910116690486a424b730b9e7b6eedf5632a398e9df164fa4cce1397a9053"
 
 [metadata.files]
 aniso8601 = [
