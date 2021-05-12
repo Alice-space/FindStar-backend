@@ -13,6 +13,7 @@ psycopg2 = {version = "^2.8.6", optional = true}
 configparser = "^5.0.2"
 daphne = {version = "^3.0.2", optional = true}
 uWSGI = {version = "^2.0.19", optional = true}
+django-cors-headers = "^3.7.0"
 
 [tool.poetry.extras]
 mysql = ["mysqlclient"]

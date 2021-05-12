@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "corsheaders",
     "graphene_django",
     "apps.find_star",
 ]
@@ -49,6 +50,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     "django.middleware.locale.LocaleMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -162,6 +164,17 @@ MEDIA_ROOT = BASE_DIR / 'media'
 ADMIN_URL = CONFIG.get("DJANGO", "ADMIN_URL")
 if not ADMIN_URL.endswith('/'):
     ADMIN_URL += '/'
+
+# CORS Settings
+# https://github.com/adamchainz/django-cors-headers
+CORS_ALLOWED_ORIGINS = [
+    "https://find-star.xgb.phy.pku.edu.cn",
+    "http://find-star.xgb.phy.pku.edu.cn",
+    "https://xgb.phy.pku.edu.cn",
+    "http://xgb.phy.pku.edu.cn",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

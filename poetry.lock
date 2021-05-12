@@ -155,6 +155,17 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-cors-headers"
+version = "3.7.0"
+description = "django-cors-headers is a Django application for handling the server headers required for Cross-Origin Resource Sharing (CORS)."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+Django = ">=2.2"
+
+[[package]]
 name = "graphene"
 version = "3.0b7"
 description = "GraphQL Framework for Python"
@@ -451,7 +462,7 @@ wsgi = ["uWSGI"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "f8bf910116690486a424b730b9e7b6eedf5632a398e9df164fa4cce1397a9053"
+content-hash = "5d8d40350a38aa3cee1f6b287d559d72bda95749048d00a71fd50e7fe59edb5d"
 
 [metadata.files]
 aniso8601 = [
@@ -542,6 +553,10 @@ daphne = [
 django = [
     {file = "Django-3.2.2-py3-none-any.whl", hash = "sha256:18dd3145ddbd04bf189ff79b9954d08fda5171ea7b57bf705789fea766a07d50"},
     {file = "Django-3.2.2.tar.gz", hash = "sha256:0a1d195ad65c52bf275b8277b3d49680bd1137a5f55039a806f25f6b9752ce3d"},
+]
+django-cors-headers = [
+    {file = "django-cors-headers-3.7.0.tar.gz", hash = "sha256:96069c4aaacace786a34ee7894ff680780ec2644e4268b31181044410fecd12e"},
+    {file = "django_cors_headers-3.7.0-py3-none-any.whl", hash = "sha256:1ac2b1213de75a251e2ba04448da15f99bcfcbe164288ae6b5ff929dc49b372f"},
 ]
 graphene = [
     {file = "graphene-3.0b7-py2.py3-none-any.whl", hash = "sha256:70293cd3cd301eb8ab69f43b18bff0223bbb458ed74904bd3dffa69f802bf6ef"},
