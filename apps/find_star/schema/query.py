@@ -1,13 +1,14 @@
 import graphene
+from graphene import Scalar
 from graphene_django import DjangoObjectType
 
-from apps.find_star.models import Birth, Image
+from apps.find_star.models import Birth, Image, Post
 
 
 class BirthType(DjangoObjectType):
     class Meta:
         model = Birth
-        fields = ["id", "birth", "word", "image_set"]
+        fields = ["id", "birth", "word", "image_set", "post"]
 
 
 class ImageType(DjangoObjectType):
@@ -15,9 +16,32 @@ class ImageType(DjangoObjectType):
         model = Image
         fields = [
             "id",
-            "birth",
             "url"
         ]
+
+
+class FileField(Scalar):
+    @staticmethod
+    def serialize(value):
+        if not value:
+            return ""
+        return value.url
+
+    @staticmethod
+    def parse_literal(node):
+        return node
+
+    @staticmethod
+    def parse_value(value):
+        return value
+
+
+class PostType(DjangoObjectType):
+    post = FileField()
+
+    class Meta:
+        model = Post
+        fields = ["id", "post"]
 
 
 class Query(graphene.ObjectType):

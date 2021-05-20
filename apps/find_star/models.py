@@ -21,3 +21,12 @@ class Image(models.Model):
     class Meta:
         verbose_name = _("Image")
         verbose_name_plural = _("Images")
+
+
+class Post(models.Model):
+    birth = models.OneToOneField(to=Birth, on_delete=models.SET_NULL, null=True)
+    post = models.ImageField(verbose_name="post")
+
+    class Meta:
+        verbose_name = _("Post")
+        verbose_name_plural = _("Posts")
