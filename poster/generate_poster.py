@@ -15,10 +15,10 @@ bottom_text = '''扫描二维码，后台回复“521”，一起寻找属于
 图片来源：cseligman.com
 北京大学物理学院团委'''
 crop_radius = 20
-font_path = './NotoSansSC-Regular.otf'
+font_path = 'poster/NotoSansSC-Regular.otf'
 text_size = 24
 bottom_text_size = 18
-qrcode_path = './qrcode.png'
+qrcode_path = 'poster/qrcode.png'
 
 
 def mask_round_crop(image, radius):
