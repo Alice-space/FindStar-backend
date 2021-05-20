@@ -10,7 +10,7 @@ django.setup()
 
 from apps.find_star.models import Birth, Image
 
-filename = "ymd2NGC_withUrl_1901_2020_2.csv"
+filename = "data.csv"
 
 reader = csv.DictReader(open(filename, "r"))
 
