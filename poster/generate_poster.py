@@ -8,7 +8,7 @@ poster_width = 640
 padding = 50
 background_color = (0, 0, 0)
 text_color = (204, 204, 204)
-bottom_text = '''扫描二维码，后台回复“521”，一起寻找属于
+bottom_text = '''扫描二维码，后台回复“星光”，一起寻找属于
 你的星星！
 
 数据来源：北京大学青年天文学会（学生社团）

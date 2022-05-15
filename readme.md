@@ -18,6 +18,7 @@ python manage.py compilemessages
 ## 导入数据
 ```shell
 poetry shell
+mkdir -p media
 python import_data.py
 python import_data2.py
 ```
